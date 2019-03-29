@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './containers/App'
 
 import Routes from '@cfg/routes'
+
+import '@cfg/datePicker'
+import '@cfg/moment'
+import '@cfg/style'
 
 ReactDOM.render(<Routes />, document.getElementById('root'))

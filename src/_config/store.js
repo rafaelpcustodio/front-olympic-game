@@ -1,4 +1,4 @@
-import { environments } from '@constants/environments'
+import { environments } from '@constants/Environments'
 
 import { createLogger } from 'redux-logger'
 

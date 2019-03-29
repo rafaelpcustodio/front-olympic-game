@@ -1,9 +1,9 @@
 import { List, Record } from 'immutable'
 
 const store = Record({
-    _listFilter: List(),
     list: List(),
-    obj: null
+    obj: null,
+    loading: false
 })()
 
 export { store }

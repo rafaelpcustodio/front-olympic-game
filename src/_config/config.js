@@ -1,8 +1,12 @@
-import { environments } from '@constants/environments'
+import { environments } from '@constants/Environments'
 
-import * as configs from '@env'
+import { config as developmentConfig } from '@env/development'
+import { config as productionConfig } from '@env/production'
 
-const environment = process.env.REACT_APP_ENVIRONMENT || environments.development
-const config = configs[environment]
+let config = developmentConfig
+
+if (process.env.REACT_APP_ENVIRONMENT === environments.production) {
+    config = productionConfig
+}
 
 export { config }

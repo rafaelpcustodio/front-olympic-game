@@ -6,8 +6,12 @@ import { getListAction, saveDataAction } from './actions'
 
 import { getAction } from '@utils/actions'
 
+import {
+    getAllApiMock as getAll,
+} from './api'
+
 function* getListRequested() {
-    const list = yield call()
+    const list = yield call(getAll)
     yield put(getListAction(list))
 }
 
@@ -17,11 +21,11 @@ function* saveDataRequested({ payload }) {
 }
 
 function* watchGetListRequest() {
-    yield takeLatest(getAction(actions.TRAVEL_REQUEST_GET_LIST), getListRequested)
+    yield takeLatest(getAction(actions.OLYMPIC_REQUEST_GET_LIST), getListRequested)
 }
 
 function* watchSaveDataRequest() {
-    yield takeLatest(getAction(actions.TRAVEL_REQUEST_SAVE_DATA), saveDataRequested)
+    yield takeLatest(getAction(actions.OLYMPIC_REQUEST_SAVE_DATA), saveDataRequested)
 }
 
 function* sagas() {

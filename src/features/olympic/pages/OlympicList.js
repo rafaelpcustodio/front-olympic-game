@@ -4,7 +4,7 @@ import App from '@containers/App'
 import Container from '@containers/Container'
 
 const OlympicList = () => (
-    <App><Container>Hello</Container></App>
+    <App/>
 )
 
 export default OlympicList

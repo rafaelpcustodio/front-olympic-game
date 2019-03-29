@@ -15,4 +15,18 @@ const http = axios.create({
     timeout: times.THIRDSECONDS
 })
 
-export { http }
+const httpMock = [
+    {
+        olympic:{'a':'a'},
+        olympics:{'b':'b'},
+        date: '1'
+    },
+    {
+        olympic:{},
+        olympics:{},
+        date: '1'
+    }
+]
+
+
+export { http, httpMock }

@@ -48,4 +48,12 @@ const getAllAPI = () => http.get(ROOT_API)
             })
     }
 
-export { getAllAPI, saveAPI }
+    const getAllApiMock = () => {
+            let response = List()
+            httpMock.forEach(item => response = response.push(new TrainModel(item)))
+            return response
+        }
+
+
+
+export { getAllAPI, saveAPI, getAllApiMock }
