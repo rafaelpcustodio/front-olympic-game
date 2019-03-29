@@ -1,10 +1,21 @@
 import React from 'react'
 
-import App from '@containers/App'
 import Container from '@containers/Container'
+import App from '@containers/App'
+import OlympicBody from '@features/olympic/components/OlympicBody'
 
-const OlympicList = () => (
-    <App/>
-)
+const OlympicList = () => {
+
+    return(
+
+        <App>
+            <Container>
+                <OlympicBody/>
+            </Container>
+        </App>
+
+    )
+
+}
 
 export default OlympicList

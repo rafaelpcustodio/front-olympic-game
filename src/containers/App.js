@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react'
 
-class App extends Component {
+import Header from '@components/Header'
+import Footer from '@components/Footer'
 
-    render() {
-        return (
-            <div className="App">Teste</div>
-        )
-    }
+const App = ({children}) => {
+
+    return(
+        <Fragment>
+            <Header/>
+                {children}
+            <Footer/>
+        </Fragment>
+    )
 
 }
 

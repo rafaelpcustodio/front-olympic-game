@@ -4,7 +4,7 @@ const config = {
     },
     app: {
         name: 'Olympic',
-        namespace: 'OLYMPIC'
+        namespace: 'olympic_platform'
     }
 }
 

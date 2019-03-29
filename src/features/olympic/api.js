@@ -1,6 +1,6 @@
 import { List } from 'immutable'
 
-import { http } from '@http'
+import { http, httpMock } from '@http'
 
 import { handleError, responseWasOK } from '@utils/http'
 
@@ -51,6 +51,7 @@ const getAllAPI = () => http.get(ROOT_API)
     const getAllApiMock = () => {
             let response = List()
             httpMock.forEach(item => response = response.push(new TrainModel(item)))
+            console.log('chamou API mockada', response)
             return response
         }
 

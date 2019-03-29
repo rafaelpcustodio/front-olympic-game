@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
 const StyledContainer = styled.main`
+    background: #fbfbfb;
+    height: 70rem;
 `
 
 const Container = ({ children }) => (
@@ -12,12 +13,5 @@ const Container = ({ children }) => (
     </StyledContainer>
 
 )
-
-Container.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.array,
-        PropTypes.object
-    ]).isRequired
-}
 
 export default Container
