@@ -6,15 +6,13 @@ import { getListAction, saveDataAction } from './actions'
 
 import { getAction } from '@utils/actions'
 
-
-
 function* getListRequested() {
-    const list = yield call(getAllAPI)
+    const list = yield call()
     yield put(getListAction(list))
 }
 
 function* saveDataRequested({ payload }) {
-    const newTravel = yield call(saveAPI, payload)
+    const newTravel = yield call(payload)
     yield put(saveDataAction(newTravel))
 }
 

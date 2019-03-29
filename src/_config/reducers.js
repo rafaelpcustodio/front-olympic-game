@@ -8,7 +8,7 @@ import { history } from './history'
 
 const reducers = combineReducers({
     olympicReducer,
-    router: connectRouter(history),
+    router: connectRouter(history)
 })
 
 export { reducers }

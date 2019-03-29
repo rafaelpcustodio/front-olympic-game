@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 
-import { saveDataAction } from './actions'
+import { saveDataAction, getListAction } from './actions'
 
 import { store } from './store'
 
